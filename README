@@ -1,5 +1,6 @@
 = Simple GAE Django CMS =
 
+ * Very simple app that can be added to any django appengine patch application.
  * Works with google app engine patch.
  * In order to use CK editor you nead to add:
 
@@ -8,3 +9,9 @@
   secure: optional
 
 To you app.yaml
+
+ * In order for Flatpages like fallback to work you nead to add:
+
+'cms.middleware.CmsFallbackMiddleware'
+
+to your MIDDLEWARE_CLASSES
