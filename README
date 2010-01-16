@@ -1,0 +1,10 @@
+= Simple GAE Django CMS =
+
+ * Works with google app engine patch.
+ * In order to use CK editor you nead to add:
+
+- url: /ckeditor
+  static_dir: cms/ckeditor
+  secure: optional
+
+To you app.yaml

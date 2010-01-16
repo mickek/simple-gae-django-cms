@@ -1,0 +1,21 @@
+{% extends 'page.html' %}
+
+{% block title %}
+	{{block.super}} / {{page.title}}
+{% endblock %}
+
+{% block sidebar-left %}
+			&nbsp;{{page.category.name}}
+			<div class="hr"></div>
+			{% if page.category.pages_set %}
+			{% for page in page.category.pages_set %}
+				<ul>
+					<li><p><a href="{{page.get_absolute_url}}" title="{{page.title}}">{{page.title|truncatewords:4}}</a></p></li><div class="hr"></div>
+				</ul>
+			{% endfor %}
+			{% endif %}
+{% endblock %}
+
+{% block cms-content %}
+	{{page.content|safe}}
+{% endblock %}
